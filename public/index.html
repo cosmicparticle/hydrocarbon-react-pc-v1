@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <title>
+
+    </title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+  <script type="text/javascript">
+    document.title=window.localStorage['programName']?window.localStorage['programName']:'HYDROCARBON';
+    window.addEventListener('beforeunload',e=>{
+      window.scrollTo(0);
+    })
+  </script>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <div class="ajax-loading" id="ajaxLoading" style="display:none;">
+      <div class="overlay"></div>
+      <div class="loading">
+          <span>运行中，请稍后...</span>
+      </div>
+    </div>
+  </body>
+</html>
