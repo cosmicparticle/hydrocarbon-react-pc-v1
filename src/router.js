@@ -24,6 +24,8 @@ export default class HydrocarbonRouter extends React.Component {
                                     <Routes>
                                         <Route path='/home' element={ProgramConfig.getCustomPage(ProgramConfig.programCode())? React.createElement(ProgramConfig.getCustomPage(ProgramConfig.programCode())): <HCWelcome/>
                                         }> </Route>
+                                        <Route path='/home/:programCode' element={ProgramConfig.getCustomPage(ProgramConfig.programCode())? React.createElement(ProgramConfig.getCustomPage(ProgramConfig.programCode())): <HCWelcome/>
+                                        }> </Route>
                                         <Route path="/page/:sourceId/:pageName"
                                                element={<HCCustomPageRouter />} exact/>
                                         <Route path="/:sourceId/act-table"
