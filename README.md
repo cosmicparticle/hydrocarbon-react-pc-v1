@@ -1,2 +1,2 @@
 # hydrocarbon-react-pc-v1
- KuangKie适配器 hydrocarbon react 脚手架
+ 基于KuangKie适配器的React脚手架项目
