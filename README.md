@@ -2,9 +2,10 @@
  基于KuangKie适配器的React脚手架项目
 
 ## 关于React
-[React](http://react.caibaojian.com.cn/)
+http://react.caibaojian.com.cn/
 
-## 联系我们
->邮箱：kuangkie@126.com  
->QQ：1048232397  
->网址：https://help.kuangkie.com  
+## 问题反馈
+如果在使用过程中发现任何问题、或者有改善建议，欢迎加入讨论群：
+>QQ群：1048232397  
+>邮箱：kuangkie@126.com   
+>网址：https://help.kuangkie.com   
