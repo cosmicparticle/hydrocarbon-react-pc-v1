@@ -3,8 +3,54 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path')
 const commonConfig = require('./webpack.common.js')
 const {merge} = require('webpack-merge')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const prodConfig = {
     mode: 'production', // 生产环境
+    optimization: {
+        splitChunks: {
+            chunks: 'async',
+            minSize: 300000,
+            maxSize: 450000,
+            minRemainingSize: 0,
+            minChunks: 1,
+            maxAsyncRequests: 30,
+            maxInitialRequests: 30,
+            enforceSizeThreshold: 500000,
+            cacheGroups: {
+                defaultVendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    chunks: "all",
+                    priority: -10,
+                    reuseExistingChunk: true,
+                },
+                default: {
+                    minChunks: 2,
+                    priority: -20,
+                    reuseExistingChunk: true,
+                },
+                antd: {
+                    name: "antd",
+                    test: /[\\/]node_modules[\\/]antd[\\/]/,
+                    chunks: "all",
+                    priority: 11, // 优先级
+                    reuseExistingChunk: true
+                },
+                aldehyde: {
+                    name: "aldehyde",
+                    test: /[\\/]node_modules[\\/]aldehyde[\\/]/,
+                    chunks: "all",
+                    reuseExistingChunk: true,
+                    priority: 10 // 优先级
+                },
+                common: {
+                    name: "common",
+                    test: /[\\/]src[\\/]/,
+                    minSize: 1024,
+                    priority: 5
+                }
+            }
+        }
+    },
     output: {
         filename: 'bundle.[chunkhash].js',  // 输出文件名，一般要加上hash
         path: path.join(__dirname, '..', 'dist')  // 输出目录
@@ -44,6 +90,7 @@ const prodConfig = {
             template: './public/index.html',
             inject: true,
         }),
+        new BundleAnalyzerPlugin(),
     ]
 }
 

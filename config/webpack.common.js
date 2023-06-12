@@ -6,6 +6,7 @@ const url = require('url');
 
 module.exports = {
     entry: path.join(srcPath, 'index'),
+
     module: {
         rules: [
             {

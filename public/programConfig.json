@@ -1,7 +1,7 @@
 {
-  "hydrocarbonServer":"/",
+  "hydrocarbonServer":"http://localhost:8383/hydrogen",
   "programName_NavLeft":"KuangKie",
-  "programName":"",
+  "programName":"HydrocarbonClient",
   "programCode":"a-program-code"
 }
 
