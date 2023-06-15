@@ -7,7 +7,11 @@ dayjs.locale('zh-cn');
 class App extends Component {
   render() {
     return (
-      <ConfigProvider locale={zhCN}>
+      <ConfigProvider locale={zhCN} theme={{
+        token: {
+          colorPrimary: '#08979c',
+        },
+      }}>
         {this.props.children}
       </ConfigProvider>
     );
