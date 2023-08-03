@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "./",
   "dependencies": {
-    "@ant-design/icons": "^5.0.1",
+    "@ant-design/icons": "^5.1.4",
     "aldehyde": "^0.2.66",
     "antd": "^5.7.3",
     "core-js": "^3.30.1",
